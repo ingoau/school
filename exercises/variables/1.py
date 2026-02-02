@@ -4,9 +4,6 @@
 inputtedWidth = input("Width: ")
 inputtedHeight = input("Height: ")
 
-width = 0
-height = 0
-
 try:
     width = float(inputtedWidth)
     height = float(inputtedHeight)
