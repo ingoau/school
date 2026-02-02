@@ -17,6 +17,14 @@ payBeforeTax = PAY_PER_HOUR * (minutes / 60)
 tax = payBeforeTax * TAX_RATE
 payAfterTax = payBeforeTax - tax
 
+days = minutes // (60 * 24)
+hours = (minutes % (60 * 24)) // 60
+minutes = minutes % 60
+
+print(f"""Days: {days}
+Hours: {hours}
+Minuts: {minutes}""")
+
 print(f"""Before tax: ${round(payBeforeTax, 2)}
 Amount scammed by the government: ${round(tax, 2)}
 Income after being scammed by the government: ${round(payAfterTax, 2)}""")
