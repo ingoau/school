@@ -14,4 +14,4 @@ except ValueError:
 
 area = width * height
 
-print(f"Area: {area}")
+print(f"The area of the room {width}m x{height}m is {area}m²")
