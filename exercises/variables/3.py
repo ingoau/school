@@ -5,15 +5,15 @@
 PAY_PER_HOUR = 18
 TAX_RATE = 0.3
 
-inputtedHours = input("Enter work hours: ")
+inputtedMinutes = input("Enter work minutes: ")
 
 try:
-    hours = float(inputtedHours)
+    minutes = float(inputtedMinutes)
 except ValueError:
     print("Input isn't a number")
     exit()
 
-payBeforeTax = PAY_PER_HOUR * hours
+payBeforeTax = PAY_PER_HOUR * (minutes / 60)
 tax = payBeforeTax * TAX_RATE
 payAfterTax = payBeforeTax - tax
 
