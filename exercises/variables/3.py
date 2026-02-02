@@ -21,10 +21,12 @@ days = minutes // (60 * 24)
 hours = (minutes % (60 * 24)) // 60
 minutes = minutes % 60
 
-print(f"""Days: {days}
+print(f"""--Time--
+Days: {days}
 Hours: {hours}
-Minuts: {minutes}""")
+Minutes: {minutes}
 
-print(f"""Before tax: ${round(payBeforeTax, 2)}
+--Money--
+Before tax: ${round(payBeforeTax, 2)}
 Amount scammed by the government: ${round(tax, 2)}
 Income after being scammed by the government: ${round(payAfterTax, 2)}""")
