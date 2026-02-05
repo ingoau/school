@@ -14,7 +14,7 @@ void setup() {
 void loop() {
   potVal = analogRead(potPin);
 
-  tone(3, potVal);
+  tone(3, potVal*2);
 
   if (potVal < 170) {
     turnOffAll();
