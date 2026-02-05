@@ -1,5 +1,9 @@
 int potPin = A5;
 int potVal = 0;
+int add = 0;
+
+int button6 = 0;
+int button7 = 0;
 
 void setup() {
   pinMode(8, OUTPUT);
@@ -9,12 +13,27 @@ void setup() {
   pinMode(12, OUTPUT);
   pinMode(13, OUTPUT);
   pinMode(3, OUTPUT);
+  pinMode(6, INPUT);
+  pinMode(7, INPUT);
 }
 
 void loop() {
   potVal = analogRead(potPin);
 
-  tone(3, potVal*2);
+  button6 = digitalRead(6);
+  button7 = digitalRead(7);
+
+  if (button6 == HIGH && button7 == HIGH) {
+    add = 3000;
+  } else if (button7 == HIGH) {
+    add = 2000;
+  } else if (button6 == HIGH) {
+    add = 1000;
+  } else {
+    add = 0;
+  }
+
+  tone(3, potVal + add);
 
   if (potVal < 170) {
     turnOffAll();
