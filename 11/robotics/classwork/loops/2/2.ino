@@ -1,3 +1,5 @@
+const int delayTime = 50;
+
 void setup() {
   pinMode(8, OUTPUT);
   pinMode(9, OUTPUT);
@@ -10,14 +12,14 @@ void setup() {
 void loop() {
   for (int x = 8; x < 14; x++) {
     digitalWrite(x, HIGH);
-    delay(500);
+    delay(delayTime);
     digitalWrite(x, LOW);
-    delay(500);
+    delay(delayTime);
   }
   for (int x = 13; x > 7; x--) {
     digitalWrite(x, HIGH);
-    delay(500);
+    delay(delayTime);
     digitalWrite(x, LOW);
-    delay(500);
+    delay(delayTime);
   }
 }
