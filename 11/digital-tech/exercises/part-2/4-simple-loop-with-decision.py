@@ -4,3 +4,7 @@
 
 def isEven(number):
     return number % 2 == 0
+
+
+for i in range(1, 21):
+    print(f"{i} {'Even' if isEven(i) else 'Odd'}")
