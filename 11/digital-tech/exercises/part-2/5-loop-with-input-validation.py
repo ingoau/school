@@ -9,3 +9,13 @@ def validate(numberAsString):
         return False
 
     return number > 0
+
+
+while True:
+    inputtedNumber = input("Enter number: ")
+    if validate(inputtedNumber):
+        break
+    else:
+        print("Invalid input")
+
+print(f"{inputtedNumber} meets requirements yay")
